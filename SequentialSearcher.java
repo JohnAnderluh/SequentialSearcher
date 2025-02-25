@@ -1,5 +1,14 @@
 public class SequentialSearcher {
 
+    public static void main(String[] args) {
+        int[] array = { 1, 2, 3, 4, 4 };
+        System.out.println("4 Index: " + find(array, 4));
+        System.out.println("4 Count: " + count(array, 4));
+        System.out.println("Max: " + max(array));
+        System.out.println("Sum: " + sum(array));
+        System.out.println("Min Odd: " + minOdd(array));
+    }
+
     public static int find(int[] array, int value) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == value) {
@@ -12,7 +21,7 @@ public class SequentialSearcher {
     public static int count(int[] array, int value) {
         int count = 0;
         for (int num : array) {
-            if (array[num] == value) {
+            if (num == value) {
                 count++;
             }
         }
