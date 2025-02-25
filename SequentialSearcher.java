@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class SequentialSearcher {
 
-    public int find(int[] array, int value) {
+    public static int find(int[] array, int value) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == value) {
                 return i;
@@ -11,7 +11,7 @@ public class SequentialSearcher {
         return -1;
     }
 
-    public int count(int[] array, int value) {
+    public static int count(int[] array, int value) {
         int count = 0;
         for (int num : array) {
             if (array[num] == value) {
@@ -21,10 +21,25 @@ public class SequentialSearcher {
         return count;
     }
 
-    public int max(int[] array){
-        
-        for (int num : array){
-            if ()
+    public static int max(int[] array) {
+        int max = Integer.MIN_VALUE;
+        for (int num : array) {
+            if (num > max) {
+                max = num;
+            }
         }
+        return max;
+    }
+
+    public static int sum(int[] array) {
+        int sum = 0;
+        for (int num : array) {
+            sum += num;
+        }
+        return sum;
+    }
+
+    public static int minOdd(int[] array) {
+
     }
 }
