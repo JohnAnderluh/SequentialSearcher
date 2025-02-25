@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class SequentialSearcher {
 
     public static int find(int[] array, int value) {
@@ -40,6 +38,19 @@ public class SequentialSearcher {
     }
 
     public static int minOdd(int[] array) {
-
+        int minOdd = Integer.MAX_VALUE;
+        boolean isOdd = false;
+        for (int num : array) {
+            if (num % 2 == 1 && num < minOdd) {
+                minOdd = num;
+                isOdd = true;
+            }
+        }
+        if (isOdd) {
+            return minOdd;
+        } else {
+            return 0;
+        }
     }
+
 }
